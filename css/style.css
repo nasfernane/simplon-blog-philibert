@@ -1,0 +1,310 @@
+/* @media screen and (max-width: 600px) { */
+@font-face {
+  font-family: "Segoe Script";
+  src: url("/fonts/segoesc.ttf") format("ttf");
+}
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+/* ----- HEADER -----*/
+
+header nav {
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+}
+
+header .navbar-expand-lgt {
+  background: #31353e;
+}
+
+header section#headerLandPage {
+  display: flex;
+  justify-content: stretch;
+  height: 35vh;
+}
+
+header section#headerLandPage #philibertPicture {
+  background-color: #daa49a;
+  height: 100%;
+  width: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header section#headerLandPage div#philibertPicture div {
+  background: url("../img/philibert.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 80%;
+  border: 4px solid #daa49a;
+}
+
+header section#headerLandPage div:nth-child(2) {
+  width: 40%;
+  height: 100%;
+  background: #f3ffe1;
+  color: #daa49a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header section#headerLandPage div:nth-child(2) p {
+  transform: rotate(-90deg);
+  text-decoration: underline;
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+header section#headerLandPage section#headerPresentation {
+  display: flex;
+  flex-direction: column;
+}
+
+header section#headerPresentation div:nth-child(1) {
+  height: 15vh;
+  width: 100%;
+  background: #f3ffe1;
+}
+
+header section#headerPresentation div:nth-child(1) #headerPunchLine {
+  background: #f3ffe1;
+  height: 15vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  top: 7.5vh;
+}
+
+header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
+  font-size: 1.6rem;
+  color: #31353e;
+  text-align: center;
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+}
+
+header #headerPresentation #headerAbout {
+  height: 44vh;
+  background: url("../img/sardine.png") center bottom no-repeat, #31353e;
+  padding-top: 25%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+header #headerPresentation #headerAbout h2 {
+  color: #eee9e9;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+header #headerPresentation #headerAbout p {
+  color: #eee9e9;
+  text-align: justify;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #f3ffe1;
+}
+
+main section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main section aside {
+  background: #daa49a;
+  width: 20vw;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section aside p {
+  transform: rotate(-90deg);
+  text-decoration: underline;
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #eee9e9;
+  font-weight: bold;
+}
+
+main section article {
+  width: 65vw;
+  height: 30vh;
+  margin-bottom: 5vh;
+}
+
+main section article {
+  position: relative;
+}
+
+main section:nth-child(1) article {
+  background: url("../img/Spices.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+main section:nth-child(2) article {
+  background: url("../img/calanque.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+main section:nth-child(3) article {
+  background: url("../img/whalers.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+main section article #spiceBlock {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 16vh;
+  background: rgb(255, 255, 255, 0.7);
+}
+
+main section article #calanqueBlock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 16vh;
+  background: rgb(255, 255, 255, 0.7);
+}
+
+main section article #whaleBlock {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 16vh;
+  background: rgb(255, 255, 255, 0.7);
+}
+
+main section article div {
+  padding: 8px;
+}
+
+main section article h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-style: italic;
+  color: #31353e;
+}
+
+main section article p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+main section article button {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0px;
+  background: #31353e;
+  color: #eee9e9;
+  opacity: 0.8;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+main section article button:hover {
+  opacity: 1;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  background: #f3ffe1;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background: ;
+}
+
+.line-1 {
+  z-index: 15;
+  opacity: 0.2;
+}
+
+.line-2 {
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.line-3 {
+  z-index: 5;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+
+.wave1 {
+  -webkit-background-size: 50% 80px;
+  background-size: 50% 80px;
+}
+
+.wave2 {
+  -webkit-background-size: 50% 100px;
+  background-size: 50% 80px;
+  animation: animate 12s linear infinite;
+}
+
+.wave3 {
+  -webkit-background-size: 50% 80px;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.5);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+/* } ----- FIN MEDIA < 600PX ----- */
