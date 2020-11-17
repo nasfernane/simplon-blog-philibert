@@ -289,8 +289,6 @@ main section article button:hover {
 
 .flipSardine {
   position: fixed;
-  top: 45%;
-  right: 0;
   width: 80px;
   height: 80px;
   border-radius: 50%;
