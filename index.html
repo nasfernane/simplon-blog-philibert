@@ -69,7 +69,10 @@
                 <div id="spiceBlock">
                     <h3>Les épices</h3>
                     <p>Comment les choisir, les marier, les cuisiner ? Le chef Philippe Maquereau nous dévoile ses secrets.</p>
-                    <button>Lire l'article</button>
+                    <div id="articleReadMore">
+                        <button>Lire l'article</button>
+                        <p class="card-text">12/10/2020</p>
+                    </div>
                 </div>
             </Article>
         </section>
@@ -81,7 +84,10 @@
                 <div id="calanqueBlock">
                     <h3>Calanque d'En-Vau</h3>
                     <p>La plus belle calanque de France ? Revue des meilleures criques pour se faire dorer les écailles cet été.</p>
-                    <button>Lire l'article</button>
+                    <div id="articleReadMore">
+                        <button>Lire l'article</button>
+                        <p class="card-text">27/10/2020</p>
+                    </div>
                 </div>
             </Article>
             <aside>
@@ -98,12 +104,62 @@
                 <div id="whaleBlock">
                     <h3>Whale Done</h3>
                     <p>Le concert d'inauguration pour la tournée de leur nouvel album a enflammé la baie de Samara.</p>
-                    <button>Lire l'article</button>
+                    <div id="articleReadMore">
+                        <button>Lire l'article</button>
+                        <p class="card-text">17/11/2020</p>
+                    </div>
                 </div>
             </Article>
         </section>
-        
         <!-- FIN ARTICLE 3-->
+
+        <!-- SIDE BAR -->
+        <div class="navigation">
+            <h2>Blogs des copains :</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="titre">Espa Don Camillo</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="titre">Barack Obacarpe</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="titre">Daurade l'exploratrice</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="titre">Poulpe Fiction</span>
+                    </a>
+                </li>
+            </ul>
+    
+        </div>
+        <!-- Menu Burger -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flipSardine flip-card-front" onclick="openSideBar()"></div>
+                <div class="flipSardine flip-card-back" onclick="openSideBar()"></div>
+            </div>
+        </div>
+        <!-- Lien js -->
+        <script type="text/javascript">
+            function openSideBar(){
+                let navigation = document.querySelector('.navigation')
+                navigation.classList.toggle('active');
+        }
+        </script>
         
     </main>
 

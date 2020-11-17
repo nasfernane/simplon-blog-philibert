@@ -4,11 +4,18 @@
   src: url("/fonts/segoesc.ttf") format("ttf");
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0 auto;
   padding: 0;
   max-width: 600px;
+  min-width: 500px;
 }
 
 /* ----- HEADER -----*/
@@ -50,7 +57,7 @@ header section#headerLandPage div#philibertPicture div {
 header section#headerLandPage div:nth-child(2) {
   width: 40%;
   height: 100%;
-  background: #f3ffe1;
+  background: #f8f9fa;
   color: #daa49a;
   display: flex;
   align-items: center;
@@ -74,11 +81,11 @@ header section#headerLandPage section#headerPresentation {
 header section#headerPresentation div:nth-child(1) {
   height: 15vh;
   width: 100%;
-  background: #f3ffe1;
+  background: #f8f9fa;
 }
 
 header section#headerPresentation div:nth-child(1) #headerPunchLine {
-  background: #f3ffe1;
+  background: #f8f9fa;
   height: 15vh;
   width: 80%;
   margin: 0 auto;
@@ -112,7 +119,7 @@ header #headerPresentation #headerAbout h2 {
 }
 
 header #headerPresentation #headerAbout p {
-  color: #eee9e9;
+  color: #f8f9fa;
   text-align: justify;
   font-style: italic;
   font-weight: lighter;
@@ -122,7 +129,7 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background: #f3ffe1;
+  background: #f8f9fa;
 }
 
 main section {
@@ -155,9 +162,6 @@ main section article {
   width: 65vw;
   height: 30vh;
   margin-bottom: 5vh;
-}
-
-main section article {
   position: relative;
 }
 
@@ -165,6 +169,7 @@ main section:nth-child(1) article {
   background: url("../img/Spices.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  margin-left: 25px;
 }
 
 main section:nth-child(2) article {
@@ -237,6 +242,144 @@ main section article button:hover {
   opacity: 1;
 }
 
+#articleReadMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.card-text {
+  font-style: italic;
+}
+
+/* -------- SIDE BAR --------  */
+
+/* ----FLIP CARD --- */
+
+.flip-card {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flipSardine {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #f8f9fa;
+  cursor: pointer;
+}
+
+.flip-card-front {
+  background: url("../img/sardine.png") center no-repeat, #31353e;
+}
+
+.flip-card-back {
+  background: url("../img/flipped_sardine.png") center no-repeat, #31353e;
+  transform: rotateY(180deg);
+}
+
+.navigation {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 0px;
+  height: 50%;
+  padding-top: 40px;
+  border-radius: 8px;
+  background: rgb(49, 53, 62, 0.9);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 250px;
+}
+
+.navigation ul {
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+  color: #f8f9fa;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+}
+
+.navigation ul li:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #daa49a;
+}
+
+.navigation ul li a .titre {
+  position: relative;
+  display: block;
+  min-width: 0 10px;
+  height: 50px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+.navigation h2 {
+  font-family: "Segoe Script", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: #daa49a;
+  position: relative;
+  display: block;
+  min-width: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
 /* ----- FOOTER ----- */
 footer {
   height: 100px;
@@ -244,7 +387,7 @@ footer {
   bottom: 0;
   margin: auto;
   overflow: hidden;
-  background: #f3ffe1;
+  background: #f8f9fa;
 }
 
 .line {
