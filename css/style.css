@@ -1,4 +1,6 @@
-/* @media screen and (max-width: 600px) { */
+/* ---------- DESIGN PRINCIPAL POUR UNE LARGEUR 500-600 PX  ---------- */
+
+/* ----- Déclaration des polices ----- */
 @font-face {
   font-family: "Segoe Script";
   src: url("/fonts/segoesc.ttf") format("ttf");
@@ -15,7 +17,7 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 600px;
-  min-width: 500px;
+  min-width: 400px;
 }
 
 /* Fenêtre modale globale */
@@ -185,6 +187,7 @@ header #headerPresentation #headerAbout p {
   font-weight: lighter;
 }
 
+/* ----- Section principales contenant les articles  ----- */
 main {
   padding: 20px;
   display: flex;
@@ -220,6 +223,8 @@ main section aside p {
 
 main section article {
   width: 65vw;
+  min-width: 240px;
+  min-height: 180px;
   height: 30vh;
   margin-bottom: 5vh;
   position: relative;
@@ -229,21 +234,21 @@ main section:nth-child(1) article {
   background: url("../img/Spices.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 main section:nth-child(2) article {
   background: url("../img/calanque.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  margin-right: 25px;
+  margin-right: 15px;
 }
 
 main section:nth-child(3) article {
   background: url("../img/whalers.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 main section article #spiceBlock {
@@ -251,6 +256,7 @@ main section article #spiceBlock {
   bottom: 0;
   right: 0;
   width: 70%;
+  min-width: 280px;
   height: 16vh;
   background: rgb(255, 255, 255, 0.7);
 }
@@ -260,6 +266,7 @@ main section article #calanqueBlock {
   bottom: 0;
   left: 0;
   width: 70%;
+  min-width: 280px;
   height: 16vh;
   background: rgb(255, 255, 255, 0.7);
 }
@@ -269,6 +276,7 @@ main section article #whaleBlock {
   bottom: 0;
   right: 0;
   width: 70%;
+  min-width: 280px;
   height: 16vh;
   background: rgb(255, 255, 255, 0.7);
 }
@@ -512,4 +520,18 @@ footer {
   }
 }
 
-/* } ----- FIN MEDIA < 600PX ----- */
+/* ---------------  MEDIA < 330 PX ---------------  */
+@media screen and (max-width: 330px) {
+  header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ---------------  FIN MEDIA < 330 PX ---------------  */
+
+/* ---------------  MEDIA < 430 PX ---------------  */
+@media screen and (max-width: 430px) {
+  header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
+    font-size: 1.2rem;
+  }
+}
