@@ -96,6 +96,7 @@ header section#headerLandPage {
   display: flex;
   justify-content: space-between;
   height: 35vh;
+  min-height: 300px;
 }
 
 header section#headerLandPage #philibertPicture {
@@ -151,6 +152,7 @@ header section#headerPresentation div:nth-child(1) {
 header section#headerPresentation div:nth-child(1) #headerPunchLine {
   background: #f8f9fa;
   height: 15vh;
+  min-height: 120px;
   width: 80%;
   margin: 0 auto;
   padding: 30px;
@@ -166,11 +168,16 @@ header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
 }
 
 header #headerPresentation #headerAbout {
-  height: 44vh;
-  background: url("../img/sardine.png") center bottom no-repeat, #31353e;
-  padding-top: 25%;
+  height: 42vh;
+  min-height: 340px;
+  background: #31353e;
+  padding-top: 20%;
   padding-left: 15%;
   padding-right: 15%;
+  display: flex;
+  justify-content: flex-direction;
+  flex-direction: column;
+  align-items: center;
 }
 
 header #headerPresentation #headerAbout h2 {
@@ -376,7 +383,7 @@ main section article button:hover {
 
 .navigation {
   position: fixed;
-  right: 0;
+  right: -3px;
   top: 50%;
   width: 0px;
   height: 50%;
