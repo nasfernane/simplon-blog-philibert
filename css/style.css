@@ -18,6 +18,8 @@ body {
   padding: 0;
   max-width: 600px;
   min-width: 400px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 /* Fenêtre modale globale */
@@ -92,7 +94,7 @@ header .navbar-expand-lgt {
 
 header section#headerLandPage {
   display: flex;
-  justify-content: stretch;
+  justify-content: space-between;
   height: 35vh;
 }
 
@@ -157,7 +159,7 @@ header section#headerPresentation div:nth-child(1) #headerPunchLine {
 }
 
 header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
-  font-size: 1.6rem;
+  font-size: min(max(16px, 4vw), 22px);
   color: #31353e;
   text-align: center;
   font-family: "Segoe Script", Arial, Helvetica, sans-serif;
@@ -205,6 +207,7 @@ main section aside {
   background: #daa49a;
   width: 20vw;
   height: 25vh;
+  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,9 +226,8 @@ main section aside p {
 
 main section article {
   width: 65vw;
-  min-width: 240px;
-  min-height: 180px;
   height: 30vh;
+  min-height: 300px;
   margin-bottom: 5vh;
   position: relative;
 }
@@ -256,8 +258,7 @@ main section article #spiceBlock {
   bottom: 0;
   right: 0;
   width: 70%;
-  min-width: 280px;
-  height: 16vh;
+  height: 50%;
   background: rgb(255, 255, 255, 0.7);
 }
 
@@ -266,8 +267,7 @@ main section article #calanqueBlock {
   bottom: 0;
   left: 0;
   width: 70%;
-  min-width: 280px;
-  height: 16vh;
+  height: 50%;
   background: rgb(255, 255, 255, 0.7);
 }
 
@@ -276,8 +276,7 @@ main section article #whaleBlock {
   bottom: 0;
   right: 0;
   width: 70%;
-  min-width: 280px;
-  height: 16vh;
+  height: 50%;
   background: rgb(255, 255, 255, 0.7);
 }
 
@@ -464,7 +463,6 @@ footer {
   width: 100%;
   overflow: hidden;
   height: 100%;
-  background: ;
 }
 
 .line-1 {
@@ -521,17 +519,161 @@ footer {
 }
 
 /* ---------------  MEDIA < 330 PX ---------------  */
-@media screen and (max-width: 330px) {
-  header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
+@media screen and (max-width: 375px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    max-width: 300px;
+  }
+
+  /* ----- header < 330px -----  */
+
+  #headerLandPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+  }
+
+  #headerLandPage #philibertPicture {
+    align-items: stretch;
+    width: 100vw;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+  }
+
+  header section#headerLandPage #philibertPicture {
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headerLandPage div:nth-child(2) {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    background: black;
+    text-decoration: none;
+  }
+
+  header section#headerLandPage div:nth-child(2) p {
+    width: 100%;
+    transform: rotate(0);
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  #headerPunchLine h1 {
     font-size: 1.2rem;
   }
+
+  #headerPunchLine {
+    height: 15vh;
+    width: 80%;
+    padding: 20px;
+    top: 7.5vh;
+  }
+
+  #headerAbout h2 {
+    color: #eee9e9;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 200;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  #headerAbout p {
+    font-size: 1rem;
+  }
+  /* ----- main section < 330 px -----  */
+
+  .navigation {
+    display: none;
+  }
+
+  .flip-card {
+    display: none;
+  }
+
+  main {
+    padding: 10px;
+  }
+  main section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 150px;
+  }
+
+  main section:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  main section aside {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 80px;
+    margin-bottom: 10px;
+    min-height: 40px;
+  }
+
+  main section aside p {
+    transform: rotate(0);
+    max-height: 20vh;
+  }
+
+  main section article {
+    width: 100%;
+  }
+
+  main section article div p {
+    font-size: 0.7rem;
+  }
+
+  main section:nth-child(1) article {
+    margin-left: 0;
+  }
+
+  main section:nth-child(2) article {
+    margin-right: 0;
+  }
+
+  main section:nth-child(3) article {
+    margin-left: 0;
+  }
+
+  /* ----- footer < 330 px ------ */
+
+  /* footer {
+    display: none;
+  } */
 }
 
-/* ---------------  FIN MEDIA < 330 PX ---------------  */
+/* ---------------  FIN MEDIA < 375 PX ---------------  */
 
-/* ---------------  MEDIA < 430 PX ---------------  */
+/* ---------------  MEDIA > 330 px && < 430 PX ---------------  */
 @media screen and (max-width: 430px) {
   header section#headerPresentation div:nth-child(1) #headerPunchLine h1 {
     font-size: 1.2rem;
   }
 }
+
+/* ---------------  MEDIA < 430 PX ---------------  */
